@@ -1,11 +1,5 @@
-// TODO: write code here
+import Trello from "./trello";
 
-// comment this to pass build
-const unusedVariable = "variable";
-
-// for demonstration purpose only
-export default function demo(value) {
-  return `Demo: ${value}`;
-}
-
-console.log("app.js included");
+const trello = new Trello;
+trello.eventListenerCardBtnAdd();
+trello.eventListenerBoard();

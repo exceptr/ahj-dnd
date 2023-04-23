@@ -18,13 +18,11 @@ body {
 }
 
 .board {
-    /* width: 100%; */
     box-sizing: border-box;
-    height: 900px;
+    max-height: 100%;
     display: flex;
-    /* padding-left: 10px; */
-    /* flex-direction: column; */
     align-items: flex-start;
+    position: relative;
 }
 
 .list-wrapper {
@@ -32,39 +30,34 @@ body {
     min-width: 290px;
     background-color: #ffffff86;
     margin: 10px;
-    /* height: 30%; */
     box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.1);
     border-radius: 10px;
-    /* min-height: 0px; */
-    /* display: flex;
-    flex-direction: column; */
     position: relative;
     padding: 5px 13px;
-    /* overflow-y: auto; */
     box-sizing: border-box;
+    max-height: 100%;
+    overflow-y: auto;
 }
 
 .list-header {
     font-size: 20px;
     font-weight: 600;
-    /* text-transform: uppercase; */
     padding: 3px 15px 7px 5px;
 }
 
 .list-content {
     position: relative;
+    /* max-height: 300px; */
 }
 
 .list-item {
     background-color: #fff;
-    /* border: #fff 20px; */
     padding: 3px 15px 3px 5px;
     box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.1);
     border-radius: 7px;
     margin-bottom: 5px;
     max-width: 100%;
     word-wrap: break-word;
-    /* color: #000; */
 }
 
 .card-btn-add {
@@ -84,6 +77,13 @@ body {
     cursor: grab;
     position: relative;
     touch-action: none;
+}
+
+.card.dragged {
+    position: absolute;
+    z-index: 999;
+    cursor: grabbing;
+    pointer-events: none;
 }
 
 .card:hover .list-item {
@@ -161,7 +161,7 @@ body {
     position: relative;
 }
 
-.card-creattor-text {
+.card-creator-text {
     background-color: #fff;
     padding: 3px 15px 3px 5px;
     box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.1);
