@@ -1,5 +1,10 @@
 import Trello from "./trello";
+import { dndCard } from "./dndCard";
 
-const trello = new Trello;
+dndCard();
+
+const trello = new Trello();
 trello.eventListenerCardBtnAdd();
 trello.eventListenerBoard();
+trello.eventListenerBeForeUnLoad();
+trello.eventListenerLoadItem();
