@@ -109,6 +109,9 @@ function onMouseDown(event) {
   if (movingElement.classList.contains("emptySectionHiddenLesson")) {
     return;
   }
+  if (movingElement.classList.contains("card-dell")) {
+    return;
+  }
   setMovingElement(event);
   shifts.set(event.clientX, event.clientY, movingElement);
   initialMovingElementPageXY.set(movingElement);
